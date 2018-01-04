@@ -32,9 +32,9 @@ def position_taken?(board, index)
   return !(board[index] == " " || board[index] == "" || board[index] == nil)
 end
 
-def move(board, index, token = "X")
+def move(board, index, token)
 #should set the correct index value of that position within the board equal to the token.
   if valid_move?(board, index) == true
-  board[index] = token
+  board[index] = "X"
   end
 end
