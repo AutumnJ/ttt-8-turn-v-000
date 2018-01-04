@@ -27,4 +27,5 @@ end
 
 def move(board, index, token = "X")
 #should set the correct index value of that position within the board equal to the token.
+  board[index] = token
 end
