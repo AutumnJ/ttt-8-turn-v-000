@@ -1,9 +1,9 @@
 def display_board(board)
-  puts "   |   |   "
+  puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
-  puts "   |   |   "
+  puts " #{board[3]} | #{board[4]} | #{board[5]} "
   puts "-----------"
-  puts "   |   |   "
+  puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
 def turn(board)
@@ -34,7 +34,6 @@ end
 def move(board, index, token = "X")
 #should set the correct index value of that position within the board equal to the token.
   if valid_move?(board, index) == true
-  display_board(board[index] = token)
-  #display_board(board)
+  board[index] = token
   end
 end
