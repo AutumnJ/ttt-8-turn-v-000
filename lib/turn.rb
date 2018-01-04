@@ -8,7 +8,7 @@ end
 
 def turn(board)
   puts "Please enter 1-9:"
-  input_to_index
+  input_to_index(index)
     if index <= 8
       move(board, index, token = "X")
     else
@@ -16,7 +16,7 @@ def turn(board)
     end
 end
 
-def input_to_index
+def input_to_index(index)
   index = (gets.to_i) - 1
 end
 
