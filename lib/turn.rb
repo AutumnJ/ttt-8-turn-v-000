@@ -1,5 +1,9 @@
 def display_board(board)
-#print out the current state of the board for the user
+  puts "   |   |   "
+  puts "-----------"
+  puts "   |   |   "
+  puts "-----------"
+  puts "   |   |   "
 end
 
 def valid_move(board, index)
