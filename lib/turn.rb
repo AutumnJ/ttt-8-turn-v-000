@@ -6,13 +6,13 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
-def input_to_index(input)
+def input_to_index
   index = (gets.to_i) - 1
 end
 
 def turn(board)
   puts "Please enter 1-9:"
-  input_to_index(input)
+  input_to_index
     if index <= 8
       move(board, index, token = "X")
     else
