@@ -14,7 +14,7 @@ def turn(board)
   puts "Please enter 1-9:"
   input = gets.chomp
   index = input_to_index(input)
-    if index <= 8
+    if index <= 8 && valid_move?(board, index) == true
       move(board, index, token = "X")
     else
       turn(board)
@@ -38,7 +38,6 @@ end
 
 def move(board, index, token = "X")
 #should set the correct index value of that position within the board equal to the token.
-  if valid_move?(board, index) == true
   board[index] = token
   display_board(board)
   end
