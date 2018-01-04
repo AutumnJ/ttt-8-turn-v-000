@@ -12,7 +12,17 @@ end
 
 def valid_move(board, index)
 #return true if the index is within the correct range of 0-8 and is currently unoccupied by an X or O token.
-#may want to define a position taken method
+  if position_taken?(board, index) == true
+    return false
+  elsif index <= 8
+    return true
+  else
+    return false
+  end
+end
+
+def position_taken?(board, index)
+  return !(board[index] == " " || board[index] == "" || board[index] == nil)
 end
 
 def move(board, index, token = "X")
