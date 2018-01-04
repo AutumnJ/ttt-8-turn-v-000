@@ -11,6 +11,7 @@ def turn(board)
   index = (gets.to_i) - 1
     if index <= 8
       move(board, index, token = "X")
+      display_board(board)
     else
       turn(board)
     end
@@ -35,6 +36,5 @@ def move(board, index, token = "X")
 #should set the correct index value of that position within the board equal to the token.
   if valid_move?(board, index) == true
   board[index] = token
-  puts board
   end
 end
