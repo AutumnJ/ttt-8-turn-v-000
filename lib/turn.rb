@@ -16,7 +16,7 @@ def turn(board)
     end
 end
 
-def valid_move(board, index)
+def valid_move?(board, index)
 #return true if the index is within the correct range of 0-8 and is currently unoccupied by an X or O token.
   if position_taken?(board, index) == true
     return false
