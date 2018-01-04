@@ -23,14 +23,11 @@ end
 
 def valid_move?(board, index)
 #return true if the index is within the correct range of 0-8 and is currently unoccupied by an X or O token.
-  if position_taken?(board, index) == true
+  if position_taken?(board, index) == true || index < 0 || index > 8
     puts "Can't move there. Please try again."
     return false
-  elsif index <= 8
-    return true
   else
-    puts "Can't move there. Please try again."
-    return false
+    return true
   end
 end
 
